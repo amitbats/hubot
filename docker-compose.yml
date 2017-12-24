@@ -1,0 +1,18 @@
+version: '2'
+services:
+  hubot-cicd:
+    image: chatopshpe/hubot-enterprise
+    volumes:
+      - .:/integration
+    environment:
+      - HUBOT_LOG_LEVEL=debug
+      - ADAPTER=slack
+      - HUBOT_APP_TOKEN=xoxp-98075568231-98075568279-98077268967-3fde7bed0f6049bf85c0ac21176d4f9c
+      - HUBOT_SLACK_TOKEN=xoxb-112510747683-85ANRm09fbmYg0XrzpSHo7UC
+      - HUBOT_JENKINS_AUTH=amit.batsray@hp.com:123456
+      - HUBOT_JENKINS_URL=http://jenkins.saas.hpeswlab.net
+      - HUBOT_STASH_URL=http://stash.saas.hpeswlab.net:7990/rest/api/1.0/projects/saas/repos
+      - HUBOT_STASH_USERNAME=batrsay
+      - HUBOT_STASH_PASSWORD=tan.car-8
+      - http_proxy=http://proxy.il.hpecorp.net:8080
+      - https_proxy=http://proxy.il.hpecorp.net:8080
